@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulários de Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <ul class="nav">
+        <li onclick="showLogin()">Login</li>
+        <li onclick="showSignup()">Inscrever-se</li>
+        <li onclick="showForgotPassword()">Esqueceu a senha</li>
+        <li onclick="showSubscribe()">Inscrito</li>
+        <li onclick="showContactUs()">Contato</li>
+    </ul>
+    <div class="wrapper">
+        <div class="rec-prism">
+            <div class="face face-top">
+                <div class="content">
+                    <h2>Inscrito</h2>
+                    <small>Digite seu e-mail:</small>
+                    <form onsubmit="event.preventDefault()">
+                        <div class="field-wrapper">
+                            <input type="text" name="email" placeholder="E-mail">
+                            <label>E-mail</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="submit" onclick="showThankYou()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="face face-front">
+                <div class="content">
+                    <h2>Entrar</h2>
+                    <form onsubmit="event.preventDefault()">
+                        <div class="field-wrapper">
+                            <input type="text" name="username" placeholder="nome de usuário">
+                            <label>Nome de Usuário</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="password" name="password" placeholder="senha" autocomplete="new-password">
+                            <label>Senha</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="submit" onclick="showThankYou()">
+                        </div>
+                        <span class="psw" onclick="showForgotPassword()">Esqueceu sua senha? </span>
+                        <span class="signup" onclick="showSignup()">Não é Usuário? Cadastre-se</span>
+                    </form>
+                </div>
+            </div>
+            <div class="face face-back">
+                <div class="content">
+                    <h2>Esqueceu sua Senha?</h2>
+                    <small>Digite seu e-mail que te enviaremos o link para você mudar de senha</small>
+                    <form onsubmit="event.preventDefault()">
+                        <div class="field-wrapper">
+                            <input type="text" name="email" placeholder="E-mail">
+                            <label>E-mail</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="submit" onclick="showThankYou()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="face face-right">
+                <div class="content">
+                    <h2>Cadastre-se</h2>
+                    <form onsubmit="event.preventDefault()">
+                        <div class="field-wrapper">
+                            <input type="text" name="email" placeholder="email">
+                            <label>E-mail</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="password" name="password" placeholder="Senha" autocomplete="new-password">
+                            <label>Senha</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="password" name="password2" placeholder="Senha" autocomplete="new-password">
+                            <label>Digite a senha novamente</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="submit" onclick="showThankYou()">
+                        </div>
+                        <span class="singin" onclick="showLogin()">Já é usuário? Entrar</span>
+                    </form>
+                </div>
+            </div>
+            <div class="face face-left">
+                <div class="content">
+                    <h2>Entre em Contato</h2>
+                    <form onsubmit="event.preventDefault()">
+                        <div class="field-wrapper">
+                            <input type="text" name="name" placeholder="nome">
+                            <label>Nome</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="text" name="email" placeholder="e-mail">
+                            <label>E-mail</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <textarea placeholder="sua mensagem"></textarea>
+                            <label>Sua Mensagem</label>
+                        </div>
+                        <div class="field-wrapper">
+                            <input type="submit" onclick="showThankYou()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="face face-bottom">
+                <div class="content">
+                    <div class="thank-you-msg">
+                        Obrigada!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>
